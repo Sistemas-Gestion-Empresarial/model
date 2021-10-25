@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="jiaz.list">
+      <field name="name">jiaz list</field>
+      <field name="model">jiaz.jiaz</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="jiaz.action_window">
+      <field name="name">jiaz window</field>
+      <field name="res_model">jiaz.jiaz</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="jiaz.action_server">
+      <field name="name">jiaz server</field>
+      <field name="model_id" ref="model_jiaz_jiaz"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="jiaz" id="jiaz.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="jiaz.menu_1" parent="jiaz.menu_root"/>
+    <menuitem name="Menu 2" id="jiaz.menu_2" parent="jiaz.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="jiaz.menu_1_list" parent="jiaz.menu_1"
+              action="jiaz.action_window"/>
+    <menuitem name="Server to list" id="jiaz" parent="jiaz.menu_2"
+              action="jiaz.action_server"/>
+-->
+  </data>
+</odoo>
